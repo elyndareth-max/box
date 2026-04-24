@@ -16,24 +16,24 @@
 
 | 名称 | 类型 | 功能简介 | 直链 |
 |---|---|---|---|
-| WeTalk | LPX | 获取 Cookie 与自动签到 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/WeTalk.lpx` |
-| PingMe | LPX | 获取 Token 与每日签到 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/PingMe.lpx` |
-| Reddit 去广告 | LPX | 过滤推广、关闭 NSFW、自动翻译 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/reddit-clean.lpx` |
-| 酷狗音乐VIP | LPX | 解锁会员及歌曲，去广告 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/kugouvip.lpx` |
-| iios签到 | LPX | 获取请求头并按设定 Cron 自动签到 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/iios_checkin.lpx` |
-| 蜜语+Lovekey | LPX | 蜜语与 Lovekey 键盘合并插件 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/mxy-lovekey.lpx` |
-| 喜马拉雅会员增强 | LPX | 解锁会员、大师课、音质/音效、下载与播放器皮肤，并净化部分广告 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/ximalaya.lpx` |
+| WeTalk | LPX | 获取 Cookie 与自动签到 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/WeTalk.lpx` |
+| PingMe | LPX | 获取 Token 与每日签到 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/PingMe.lpx` |
+| Reddit 去广告 | LPX | 过滤推广、关闭 NSFW、自动翻译 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/reddit-clean.lpx` |
+| 酷狗音乐VIP | LPX | 解锁会员及歌曲，去广告 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/kugouvip.lpx` |
+| iios签到 | LPX | 获取请求头并按设定 Cron 自动签到 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/iios_checkin.lpx` |
+| 蜜语+Lovekey | LPX | 蜜语与 Lovekey 键盘合并插件 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/mxy-lovekey.lpx` |
+| 喜马拉雅会员增强 | LPX | 解锁会员、大师课、音质/音效、下载与播放器皮肤，并净化部分广告 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/ximalaya.lpx` |
 
 ### 插件直链汇总
 
 ```text
-https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/WeTalk.lpx
-https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/PingMe.lpx
-https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/reddit-clean.lpx
-https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/kugouvip.lpx
-https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/iios_checkin.lpx
-https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/mxy-lovekey.lpx
-https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/ximalaya.lpx
+https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/WeTalk.lpx
+https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/PingMe.lpx
+https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/reddit-clean.lpx
+https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/kugouvip.lpx
+https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/iios_checkin.lpx
+https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/mxy-lovekey.lpx
+https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/ximalaya.lpx
 ```
 
 ---
@@ -42,7 +42,7 @@ https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/ximalaya
 
 | 名称 | 类型 | 功能简介 | 直链 |
 |---|---|---|---|
-| 小米刷步 | LTX | 每天 08:33 执行小米刷步任务 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Task/mi-step.ltx` |
+| 小米刷步 | LTX | 每天 08:33 执行小米刷步任务 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Task/mi-step.ltx` |
 
 ---
 

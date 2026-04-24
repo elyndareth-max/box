@@ -2,7 +2,7 @@
 #!desc=蜜语与 Lovekey 键盘合并插件
 #!author=Yu9191, Minis
 #!homepage=https://github.com/elyndareth-max/box
-#!openUrl=https://github.com/elyndareth-max/box/blob/master/Loon/Plugin/mxy-lovekey.lpx
+#!openUrl=https://github.com/elyndareth-max/box/blob/main/Loon/Plugin/mxy-lovekey.lpx
 #!tag=工具
 #!icon=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/06jichang/XXAI.png
 #!system=iOS
@@ -10,11 +10,11 @@
 #!date=2026-04-24 19:54:38
 
 [Script]
-http-request ^https:\/\/api\.honey\.zzzs888\.com\/api\/apple\/open\/chat_stream script-path=https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/mxy.js, timeout=60, tag=蜜语请求头
-http-response ^https:\/\/api\.honey\.zzzs888\.com\/api\/apple\/account\?version script-path=https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/mxy.js, requires-body=true, timeout=60, tag=蜜语会员
-http-request ^https:\/\/sea\.api\.lovekeyboard\.com\/v1\/chat\/keyboard-stream-msg script-path=https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/lovekey.js, timeout=60, tag=Lovekey聊天
-http-request ^https:\/\/sea\.api\.lovekeyboard\.com\/v1\/chat\/keyboard-ow-msg script-path=https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/lovekey.js, timeout=60, tag=Lovekey开场白
-http-response ^https:\/\/sea\.api\.lovekeyboard\.com\/v2\/account script-path=https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/lovekey.js, requires-body=true, timeout=60, tag=Lovekey会员
+http-request ^https:\/\/api\.honey\.zzzs888\.com\/api\/apple\/open\/chat_stream script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/mxy.js, timeout=60, tag=蜜语请求头
+http-response ^https:\/\/api\.honey\.zzzs888\.com\/api\/apple\/account\?version script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/mxy.js, requires-body=true, timeout=60, tag=蜜语会员
+http-request ^https:\/\/sea\.api\.lovekeyboard\.com\/v1\/chat\/keyboard-stream-msg script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/lovekey.js, timeout=60, tag=Lovekey聊天
+http-request ^https:\/\/sea\.api\.lovekeyboard\.com\/v1\/chat\/keyboard-ow-msg script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/lovekey.js, timeout=60, tag=Lovekey开场白
+http-response ^https:\/\/sea\.api\.lovekeyboard\.com\/v2\/account script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/lovekey.js, requires-body=true, timeout=60, tag=Lovekey会员
 
 [MITM]
 hostname = api.honey.zzzs888.com, sea.api.lovekeyboard.com
