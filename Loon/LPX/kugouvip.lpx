@@ -2,7 +2,7 @@
 #!desc=酷狗音乐会员解锁与去广告插件，支持会员信息、资源权限、歌曲链接及部分广告净化。
 #!author=chmg2025, Minis
 #!homepage=https://github.com/elyndareth-max/box
-#!openUrl=https://github.com/elyndareth-max/box/blob/main/Loon/Plugin/kugouvip.lpx
+#!openUrl=https://github.com/elyndareth-max/box/blob/main/Loon/LPX/kugouvip.lpx
 #!tag=音乐
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/KuGou.png
 #!system=iOS

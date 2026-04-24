@@ -2,7 +2,7 @@
 #!desc=过滤推广、关闭 NSFW 提示、自动开启翻译（Loon 版）
 #!author=QingRex, Minis
 #!homepage=https://github.com/elyndareth-max/box
-#!openUrl=https://github.com/elyndareth-max/box/blob/main/Loon/Plugin/reddit-clean.lpx
+#!openUrl=https://github.com/elyndareth-max/box/blob/main/Loon/LPX/reddit-clean.lpx
 #!tag=去广告
 #!icon=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/reddit.png
 #!system=iOS
@@ -16,8 +16,8 @@ nsfw = switch, true, false, tag=关闭NSFW提示, desc=开启后自动关闭 NSF
 force-http-engine-hosts = gql.reddit.com, gql-fed.reddit.com
 
 [Script]
-http-request ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/reddit-translation-request.js, timeout=60, tag=Reddit翻译请求头
-http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/reddit-clean.js, argument=nsfw={nsfw}, requires-body=true, timeout=60, tag=Reddit去广告
+http-request ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Script/reddit-translation-request.js, timeout=60, tag=Reddit翻译请求头
+http-response ^https?:\/\/gql(-fed)?\.reddit\.com script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Script/reddit-clean.js, argument=nsfw={nsfw}, requires-body=true, timeout=60, tag=Reddit去广告
 
 [MITM]
 hostname = gql.reddit.com, gql-fed.reddit.com

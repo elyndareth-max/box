@@ -2,7 +2,7 @@
 #!desc=喜马拉雅会员解锁、大师课、音质/音效/下载/播放器皮肤增强，并净化部分广告。
 #!author=WeiGiegie, Minis
 #!homepage=https://github.com/elyndareth-max/box
-#!openUrl=https://github.com/elyndareth-max/box/blob/main/Loon/Plugin/ximalaya.lpx
+#!openUrl=https://github.com/elyndareth-max/box/blob/main/Loon/LPX/ximalaya.lpx
 #!tag=音乐
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon_120px/ximalayafm.png
 #!system=iOS
