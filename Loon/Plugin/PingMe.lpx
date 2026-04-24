@@ -1,0 +1,21 @@
+#!name=PingMe
+#!desc=PingMe 获取 Token 与每日签到插件
+#!author=怎么肥事, Minis
+#!homepage=https://github.com/elyndareth-max/box
+#!openUrl=https://github.com/elyndareth-max/box/blob/master/Loon/Plugin/PingMe.lpx
+#!tag=签到
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/PingMe.png
+#!system=iOS
+#!loon_version=3.2.4(787)
+#!date=2026-04-21 21:00:00
+
+[Argument]
+arg2 = switch,flag,tag=token
+arg1 = input,"30 8,20 * * *",tag=cron
+
+[Script]
+cron {arg1} script-path=https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/PingMe.js, timeout=120,tag=PingMe签到任务
+http-request ^https:\/\/api\.pingmeapp\.net\/app\/queryBalanceAndBonus script-path=https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/PingMe.js, timeout=300, enable={arg2}, tag=token
+
+[MITM]
+hostname = api.pingmeapp.net

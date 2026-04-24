@@ -1,0 +1,35 @@
+#!name=酷狗音乐VIP
+#!desc=酷狗音乐会员解锁与去广告插件，支持会员信息、资源权限、歌曲链接及部分广告净化。
+#!author=chmg2025, Minis
+#!homepage=https://github.com/elyndareth-max/box
+#!openUrl=https://github.com/elyndareth-max/box/blob/master/Loon/Plugin/kugouvip.lpx
+#!tag=音乐
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/1024px/KuGou.png
+#!system=iOS
+#!loon_version=3.2.1(372)
+#!date=2026-04-23 21:00:00
+
+[Rewrite]
+^https?:\/\/vipssr\.kugou\.com\/static\/js\/async\/flexPayPopup - reject
+^https?:\/\/.*\.kugou\.com\/vipssr\/prepay_ios\.html - reject
+^https?:\/\/staticssl\.kugou\.com\/common\/js-lib\/vip\/dlg_ctrler_v2\.js$ - reject
+^https?:\/\/h5\.kugou\.com\/apps\/vipcenter\/_next\/static\/css - reject
+^https?:\/\/vipssr\.kugou\.com\/static\/js\/vip\/newUi\/vipPageUnionIosContent- - reject
+^https?:\/\/fx\.service\.kugou\.com\/fx\/activity\/register\/center\/sidebar\/configV2$ - reject
+^https?:\/\/service1\.fanxing\.kugou\.com\/video\/mo\/live\/pull\/mutiline\/cfg - reject
+^http:\/\/log\.web\.kugou\.com\/postEvent\.php$ - reject
+webvoobssdl.kugou.com - reject
+ad.tencentmusic.com - reject
+ads.service.kugou.com - reject
+adsfile.kugou.com - reject
+mdpfilebssdlbig.kugou.com - reject
+adserviceretry.kugou.com - reject
+157.255.11.247/32 - reject
+111.206.99.202/32 - reject
+
+[Script]
+http-response ^https?:\/\/.*\.kugou\.com\/(v1|v2|v3|v5|mobile|media.store\/v1|adp\/ad\/v1|ads.gateway\/v2|fxsing\/vip\/user|sing7\/homepage\/json\/v3\/vip)\/(login_by_token|get_my_info|get_login_extend_info|vipinfoV2|get_res_privilege\/lite|mine_top_banner|task_center_entrance|info|tip).* script-path=https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Script/kugouvip.js, requires-body=true, timeout=60, tag=酷狗
+http-response ^https?:\/\/.*\.kugou\.com\/(v5|tracker\/v5)\/url script-path=https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Script/kugouvip.js, requires-body=true, timeout=60, tag=酷狗V5
+
+[MITM]
+hostname = *.kugou.com
