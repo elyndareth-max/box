@@ -46,17 +46,6 @@ https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/ximalaya
 
 ---
 
-## Loon 脚本
-
-| 名称 | 类型 | 说明 | 直链 |
-|---|---|---|---|
-| kugouvip | JS | 酷狗音乐会员脚本 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Script/kugouvip.js` |
-| ximalaya | JS | 喜马拉雅会员增强脚本 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Script/ximalaya.js` |
-| fmz200 图标库 | JSON | fmz200 图标索引文件 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Icons/icons-all.json` |
-| lige47 图标库 | JSON | lige47 图标索引文件 | `https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Icons/ligeicon.json` |
-
----
-
 ## 插件说明
 
 ### WeTalk
@@ -106,18 +95,3 @@ https://raw.githubusercontent.com/elyndareth-max/box/master/Loon/Plugin/ximalaya
 - 单次任务最长重试窗口：30 分钟
 - 成功通知会显示各关键步骤重试次数
 - 执行时间：每天 `08:33`
-
----
-
-## 配套脚本文件
-
-```text
-Loon/Plugin/WeTalk.js
-Loon/Plugin/PingMe.js
-Loon/Plugin/reddit-clean.js
-Loon/Plugin/reddit-translation-request.js
-Loon/Plugin/iios_checkin.js
-Loon/Plugin/lovekey.js
-Loon/Script/kugouvip.js
-Loon/Script/ximalaya.js
-```
