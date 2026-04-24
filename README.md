@@ -4,7 +4,7 @@
 
 ## 仓库说明
 
-- 默认分支：`master`
+- 默认分支：`main`
 - 适用工具：Loon
 - 托管内容：插件（`.lpx`）、任务（`.ltx`）、脚本（`.js`）、图标索引（`.json`）
 
@@ -23,6 +23,7 @@
 | iios签到 | LPX | 获取请求头并按设定 Cron 自动签到 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/iios_checkin.lpx` |
 | 蜜语+Lovekey | LPX | 蜜语与 Lovekey 键盘合并插件 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/mxy-lovekey.lpx` |
 | 喜马拉雅会员增强 | LPX | 解锁会员、大师课、音质/音效、下载与播放器皮肤，并净化部分广告 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/ximalaya.lpx` |
+| 菜谱大全会员增强 | LPX | 香哈菜谱 / 菜谱大全 / 烘焙小屋会员解锁与内容增强 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/caipu.lpx` |
 
 ### 插件直链汇总
 
@@ -34,6 +35,7 @@ https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/kugouvip.l
 https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/iios_checkin.lpx
 https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/mxy-lovekey.lpx
 https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/ximalaya.lpx
+https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/caipu.lpx
 ```
 
 ---
@@ -82,6 +84,11 @@ https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Plugin/ximalaya.l
 ### 喜马拉雅会员增强
 - 解锁会员、大师课、音质/音效、下载与播放器皮肤等能力
 - 净化部分广告、签到页与底部会员弹窗
+- 已改为仓库自托管脚本与插件
+
+### 菜谱大全会员增强
+- 适配香哈菜谱、菜谱大全、烘焙小屋相关会员接口
+- 解锁会员状态与部分付费内容展示
 - 已改为仓库自托管脚本与插件
 
 ---
