@@ -10,7 +10,7 @@
 
 ---
 
-## Loon 插件
+## Loon 插件（LPX）
 
 > 可直接复制以下直链导入 Loon。
 
@@ -40,7 +40,7 @@ https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/caipu.lpx
 
 ---
 
-## Loon 任务
+## Loon 任务（LTX）
 
 | 名称 | 类型 | 功能简介 | 直链 |
 |---|---|---|---|
