@@ -24,7 +24,7 @@
 | 蜜语+Lovekey | LPX | 蜜语与 Lovekey 键盘合并插件 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/mxy-lovekey.lpx` |
 | 喜马拉雅会员增强 | LPX | 解锁会员、大师课、音质/音效、下载与播放器皮肤，并净化部分广告 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/ximalaya.lpx` |
 | 菜谱大全会员增强 | LPX | 香哈菜谱 / 菜谱大全 / 烘焙小屋会员解锁与内容增强 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/caipu.lpx` |
-| 网易云音乐-自填版 | LPX | 去广告 + 自填 Cookie/MConfig-Info/User-Agent | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/wyy-self-fill.lpx` |
+| 网易云音乐 | LPX | 去广告 + 自填 Cookie / MConfigInfo / UserAgent | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/wyy-self-fill.lpx` |
 
 ### 插件直链汇总
 
