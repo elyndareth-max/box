@@ -52,11 +52,13 @@ https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/caipu.lpx
 
 ### WeTalk
 - 获取 Cookie
+- 默认每 4 小时执行一次签到任务
 - 按设定 Cron 自动执行签到
 - 支持在插件参数中控制 Cookie 获取与定时任务开关
 
 ### PingMe
 - 获取 Token
+- 默认每 4 小时执行一次签到任务
 - 按设定 Cron 自动执行签到
 - 支持在插件参数中控制 Token 获取与定时任务开关
 
