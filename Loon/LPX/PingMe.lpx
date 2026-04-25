@@ -11,7 +11,7 @@
 
 [Argument]
 arg2 = switch,flag,tag=token
-arg1 = input,"0 */4 * * *",tag=cron
+arg1 = input,"10 */4 * * *",tag=cron
 
 [Script]
 cron {arg1} script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Script/PingMe.js, timeout=120,tag=PingMe签到任务
