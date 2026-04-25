@@ -24,6 +24,7 @@
 | 蜜语+Lovekey | LPX | 蜜语与 Lovekey 键盘合并插件 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/mxy-lovekey.lpx` |
 | 喜马拉雅会员增强 | LPX | 解锁会员、大师课、音质/音效、下载与播放器皮肤，并净化部分广告 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/ximalaya.lpx` |
 | 菜谱大全会员增强 | LPX | 香哈菜谱 / 菜谱大全 / 烘焙小屋会员解锁与内容增强 | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/caipu.lpx` |
+| 网易云音乐-自填版 | LPX | 去广告 + 自填 Cookie/MConfig-Info/User-Agent | `https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/wyy-self-fill.lpx` |
 
 ### 插件直链汇总
 
@@ -36,6 +37,7 @@ https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/iios_checkin.
 https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/mxy-lovekey.lpx
 https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/ximalaya.lpx
 https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/caipu.lpx
+https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/wyy-self-fill.lpx
 ```
 
 ---
@@ -92,6 +94,11 @@ https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/LPX/caipu.lpx
 - 适配香哈菜谱、菜谱大全、烘焙小屋相关会员接口
 - 解锁会员状态与部分付费内容展示
 - 已改为仓库自托管脚本与插件
+
+### 网易云音乐-自填版
+- 支持在插件参数中自行填写 Cookie、MConfig-Info、User-Agent
+- 默认提供去广告与首页精简开关
+- 不内置任何共享凭证
 
 ---
 

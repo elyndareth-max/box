@@ -1,0 +1,59 @@
+#!name=网易云音乐-自填版
+#!desc=去广告 + 自填 Cookie/MConfig-Info/User-Agent 插件
+#!author=anyehttp, Yu9191, Minis
+#!homepage=https://github.com/elyndareth-max/box
+#!openUrl=https://github.com/elyndareth-max/box/blob/main/Loon/LPX/wyy-self-fill.lpx
+#!tag=音乐
+#!icon=https://raw.githubusercontent.com/Keywos/rule/main/tv/app/144px/Netease.png
+#!system=iOS
+#!loon_version=3.2.4(787)
+#!date=2026-04-25 18:58:00
+
+[Argument]
+PRGG = switch, true, false, tag=隐藏[首页-问候语], desc=
+PRRK = switch, true, false, tag=隐藏[首页-排行榜], desc=
+PRDRD = switch, false, true, tag=隐藏[首页-每日推荐], desc=
+PRSCVPT = switch, false, true, tag=隐藏[首页-推荐歌单], desc=
+PRST = switch, false, true, tag=隐藏[首页-最近常听], desc=
+PRRR = switch, true, false, tag=隐藏[首页-雷达歌单], desc=
+HMPR = switch, true, false, tag=隐藏[首页-音乐合伙人], desc=
+PRMST = switch, true, false, tag=隐藏[首页-推荐专属歌单], desc=
+PRCN = switch, true, false, tag=隐藏[首页-你的专属歌单], desc=
+SelfMember = switch, false, true, tag=启用[自填会员], desc=开启后使用你自己填写的请求头
+Cookie = input, "", tag=Cookie, desc=填写你自己的完整 Cookie
+MConfigInfo = input, "", tag=MConfigInfo, desc=可选，填写你自己的 MConfig-Info
+UserAgent = input, "", tag=UserAgent, desc=可选，填写你自己的 User-Agent
+LogLevel = select, "info", "off", "error", "warn", "debug", "all", tag=日志级别, desc=
+
+[Rule]
+DOMAIN, iadmat.nosdn.127.net, REJECT
+DOMAIN, iadmatapk.nosdn.127.net, REJECT
+DOMAIN, iadmusicmat.music.126.net, REJECT
+DOMAIN, iadmusicmatvideo.music.126.net, REJECT
+DOMAIN, ipv4.music.163.com, REJECT
+DOMAIN, ipv6.music.163.com, REJECT
+
+[Rewrite]
+^https?://interface.*\.music\.163\.com/eapi/ad/get - reject
+^https?://interface.*\.music\.163\.com/eapi/ad/config/get - reject
+^https?://interface.*\.music\.163\.com/eapi/ad/iyunIds - reject
+^https?://interface.*\.music\.163\.com/eapi/ad/prefetch/select - reject
+^https?://interface.*\.music\.163\.com/eapi/ad/loading/current - reject
+^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:delivery\/(batch-)?deliver|moment\/tab\/info\/|side-bar\/mini-program\/music-service\/account|yunbei\/account\/entrance\/) mock-response-body data-type=text data="{}" status-code=200
+^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:community\/friends\/fans-group\/artist\/group\/|mine\/applet\/redpoint|music\/songshare\/text\/recommend\/|resniche\/position\/play\/new\/|resniche\/tspopup\/show|resource\/comments?\/musiciansaid\/|user\/sub\/artist) mock-response-body data-type=text data="{}" status-code=200
+^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:ios\/version|mlivestream\/entrance\/playpage\/|link\/position\/show\/strategy|link\/scene\/show\/resource|v1\/content\/exposure\/comment\/banner\/) mock-response-body data-type=text data="{}" status-code=200
+^https?:\/\/interface\d?\.music\.163\.com\/w?eapi\/(?:activity\/bonus\/playpage\/time\/query|resource-exposure\/|search\/(?:chart\/|rcmd\/keyword\/|specialkeyword\/)) mock-response-body data-type=text data="{}" status-code=200
+^https:\/\/interface\d\.music\.163\.com\/eapi\/my\/podcast\/tab\/recommend mock-response-body data-type=text data="{}" status-code=200
+^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ mock-response-body data-type=text
+^https?:\/\/interface\d?\.music\.163.com\/w?e?api\/search\/default mock-response-body data-type=text
+
+[Script]
+http-request ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/eapi\/(playermode\/|search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page)|v3\/song\/detail|song\/(?:chorus|enhance\/|play\/|type\/detail\/get)|(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs)|vipnewcenter\/app\/resource\/newaccountpage|vipauth\/app\/auth\/(soundquality\/)?query|batch) script-path=https://raw.githubusercontent.com/elyndareth-max/box/main/Loon/Script/wyy-self-fill.js, timeout=60, tag=自填会员请求头, argument=SelfMember={SelfMember}&Cookie={{{Cookie}}}&MConfigInfo={{{MConfigInfo}}}&UserAgent={{{UserAgent}}}
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path=https://raw.githubusercontent.com/Yu9191/NeteasemusicAd/main/wyyad.js, requires-body=true, binary-body-mode=true, timeout=20, tag=通用(评论区/广告/红点), argument=LogLevel={LogLevel}
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/top\/tab script-path=https://raw.githubusercontent.com/Yu9191/NeteasemusicAd/main/wyyad.js, requires-body=true, binary-body-mode=true, timeout=20, tag=顶部Tab, argument=LogLevel={LogLevel}
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path=https://raw.githubusercontent.com/Yu9191/NeteasemusicAd/main/wyyad.js, requires-body=true, binary-body-mode=true, timeout=20, tag=首页推荐, argument=PRGG={PRGG}&PRDRD={PRDRD}&PRSCVPT={PRSCVPT}&PRST={PRST}&HMPR={HMPR}&PRRR={PRRR}&PRRK={PRRK}&PRMST={PRMST}&PRCN={PRCN}&LogLevel={LogLevel}
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path=https://raw.githubusercontent.com/Yu9191/NeteasemusicAd/main/wyyad.js, requires-body=true, binary-body-mode=true, timeout=20, tag=发现页, argument=LogLevel={LogLevel}
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path=https://raw.githubusercontent.com/Yu9191/NeteasemusicAd/main/wyyad.js, requires-body=true, binary-body-mode=true, timeout=20, tag=我的页面广告, argument=LogLevel={LogLevel}
+
+[MITM]
+hostname = interface*.music.163.com, ipv4.music.163.com
