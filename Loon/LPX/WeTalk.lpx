@@ -20,4 +20,4 @@ http-request ^https:\/\/api\.wetalkapp\.com\/app\/queryBalanceAndBonus script-pa
 [Argument]
 sw=switch,true,tag=WeTalk Cron,desc=
 sw2=switch,false,tag=WeTalk Cookie,desc=
-cron = input, "40 */2 * * *", tag=Cron时间, desc=
+cron = input, "0 */4 * * *", tag=Cron时间, desc=
