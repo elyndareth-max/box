@@ -13,12 +13,12 @@
 hostname = personal-act.wps.cn
 
 [Argument]
-hot = input, null, tag=热门任务开关, desc=
-trial = input, null, tag=试用任务开关, desc=
-signin = input, null, tag=签到任务开关, desc=
-fragment = input, null, tag=碎片任务开关, desc=
-lottery = input, null, tag=抽奖任务开关, desc=
-clockin = input, null, tag=打卡任务开关, desc=
+hot = switch, true, false, tag=热门任务开关, desc=
+trial = switch, true, false, tag=试用任务开关, desc=
+signin = switch, true, false, tag=签到任务开关, desc=
+fragment = switch, true, false, tag=碎片任务开关, desc=
+lottery = switch, true, false, tag=抽奖任务开关, desc=
+clockin = switch, true, false, tag=打卡任务开关, desc=
 
 [Script]
 http-request ^https:\/\/personal-act\.wps\.cn\/activity-rubik\/activity\/page_info script-path=https://raw.githubusercontent.com/MaYIHEI/paperclip/refs/heads/main/app/wps/wps.cookie.js, requires-body=false, img-url=https://raw.githubusercontent.com/MaYIHEI/pin/refs/heads/main/app/wps.png, timeout=60, tag=WPS Cookie
