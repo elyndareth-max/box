@@ -7,7 +7,7 @@
 #!icon=https://raw.githubusercontent.com/52Lxcloud/ScriptKit/refs/heads/main/Icons/ninebot.png
 #!system=iOS
 #!loon_version=3.2.4(787)
-#!date=2026-06-26 16:35:00
+#!date=2026-06-26 16:45:00
 
 [General]
 force-http-engine-hosts = cn-cbu-gateway.ninebot.com
