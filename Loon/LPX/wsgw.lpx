@@ -7,7 +7,7 @@
 #!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png
 #!system=iOS
 #!loon_version=3.2.4(787)
-#!date=2026-06-26 17:05:00
+#!date=2026-08-11 13:48:00
 
 [Argument]
 sgcc_enable = switch, true, false, tag=重写开关, desc=是否开启接口重写
