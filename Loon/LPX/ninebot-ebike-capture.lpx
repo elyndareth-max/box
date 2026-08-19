@@ -7,7 +7,7 @@
 #!tag=九号智能电动车
 #!system=iOS,iPadOS,macOS
 #!loon_version=3.2.4(787)
-#!date=2026-08-11 13:55:00
+#!date=2026-08-11 13:58:00
 #!version=2.9.2 + 成就数据自动抓取版
 #!system_version=15
 
@@ -15,8 +15,11 @@
 capture = switch, false, true, tag=自动抓包开关, desc=开启后访问九号签到接口自动写入鉴权信息到 BoxJs
 
 [Script]
-http-response ^https:\/\/cn-cbu-gateway\.ninebot\.com\/portal\/api\/user-sign\/v2\/(status|sign|blind-box\/receive) script-path=https://raw.githubusercontent.com/QinyRui/QYR-/jiuhao/Ninebot_Sign_Single_v2.9.js, timeout=10, tag=九号-抓包写入, enable={capture}, script-update-interval=0, requires-body=true
-http-response ^https:\/\/api5-h5-app-bj\.ninebot\.com\/web\/rank\/my-achievement script-path=https://raw.githubusercontent.com/QinyRui/QYR-/jiuhao/Ninebot_Sign_Single_v2.9.js, timeout=10, tag=九号-成就抓包, enable={capture}, script-update-interval=0, requires-body=true
+http-request ^https:\/\/cn-cbu-gateway\.ninebot\.com\/portal\/api\/user-sign\/v2\/(status|sign|blind-box\/receive) script-path=https://raw.githubusercontent.com/QinyRui/QYR-/jiuhao/Ninebot_Sign_Single_v2.9.js, timeout=10, tag=九号-抓包写入请求头, enable={capture}, script-update-interval=0, requires-body=false
+http-response ^https:\/\/cn-cbu-gateway\.ninebot\.com\/portal\/api\/user-sign\/v2\/(status|sign|blind-box\/receive) script-path=https://raw.githubusercontent.com/QinyRui/QYR-/jiuhao/Ninebot_Sign_Single_v2.9.js, timeout=10, tag=九号-抓包写入响应, enable={capture}, script-update-interval=0, requires-body=true
+http-request ^https:\/\/api5-h5-app-bj\.ninebot\.com\/web\/rank\/my-achievement script-path=https://raw.githubusercontent.com/QinyRui/QYR-/jiuhao/Ninebot_Sign_Single_v2.9.js, timeout=10, tag=九号-成就抓包请求, enable={capture}, script-update-interval=0, requires-body=true
+http-response ^https:\/\/api5-h5-app-bj\.ninebot\.com\/web\/rank\/my-achievement script-path=https://raw.githubusercontent.com/QinyRui/QYR-/jiuhao/Ninebot_Sign_Single_v2.9.js, timeout=10, tag=九号-成就抓包响应, enable={capture}, script-update-interval=0, requires-body=true
+http-response ^https:\/\/cn-cbu-gateway\.ninebot\.com\/portal\/api\/(device\/realTimeData|vehicle\/v1\/device\/status|battery-soc-info) script-path=https://raw.githubusercontent.com/QinyRui/QYR-/jiuhao/Ninebot_Sign_Single_v2.9.js, timeout=10, tag=九号-车辆数据抓包, enable={capture}, script-update-interval=0, requires-body=true
 http-response ^https:\/\/raw\.githubusercontent\.com\/QinyRui\/QYR-\/main\/jiuhao\/Ninebot\.boxjs\.json script-path=https://raw.githubusercontent.com/QinyRui/QYR-/jiuhao/BoxJsCors.js, timeout=10, tag=九号-BoxJs跨域, enable=true, script-update-interval=0
 
 [Rewrite]
