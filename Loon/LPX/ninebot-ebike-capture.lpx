@@ -7,7 +7,7 @@
 #!tag=九号智能电动车
 #!system=iOS,iPadOS,macOS
 #!loon_version=3.2.4(787)
-#!date=2026-08-11 13:52:00
+#!date=2026-08-11 13:55:00
 #!version=2.9.2 + 成就数据自动抓取版
 #!system_version=15
 
@@ -23,4 +23,4 @@ http-response ^https:\/\/raw\.githubusercontent\.com\/QinyRui\/QYR-\/main\/jiuha
 https:\/\/raw\.githubusercontent\.com\/QinyRui\/QYR-\/main\/jiuhao\/Ninebot\.boxjs\.json response-body script-path=https://raw.githubusercontent.com/QinyRui/QYR-/jiuhao/BoxJsCors.js
 
 [MITM]
-hostname = cn-cbu-gateway.ninebot.com, api5-h5-app-bj.ninebot.com, raw.githubusercontent.com
+hostname = cn-cbu-gateway.ninebot.com, api5-h5-app-bj.ninebot.com
