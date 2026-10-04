@@ -43,12 +43,8 @@ function GetCookie() {
     const cookie = headers.Cookie || headers.cookie || '';
     const cookieNames = cookie.match(/(?:^|;)\s*([^=;]+)=/g) || [];
     const names = cookieNames.map((item) => item.replace(/^[;\s]*/, '').replace(/=$/, ''));
-    const hasLoginCookie = [
-        'JSESSIONID',
-        'ecs_token',
-        'ecs_acc',
-        'ecs_cookie',
-    ].some((name) => cookie.indexOf(name) > -1);
+    // 仅接受流量查询接口携带的 JSESSIONID，避免普通接口 Cookie 覆盖登录态。
+    const hasLoginCookie = cookie.indexOf('JSESSIONID=') > -1;
 
     $.log(url);
     $.log(headers);
