@@ -48,9 +48,6 @@ function GetCookie() {
         'ecs_token',
         'ecs_acc',
         'ecs_cookie',
-        'u_account',
-        'city',
-        'c_version',
     ].some((name) => cookie.indexOf(name) > -1);
 
     $.log(url);
